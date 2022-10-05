@@ -1,0 +1,30 @@
+python autograder.py
+python autograder.py -q q1
+python autograder.py -t test_cases/q2/0-small-tree
+
+开启图形or关闭
+--graphics
+--no-graphics or -q
+
+##　Welcome to Multi-Agent Pacman
+python pacman.py -p ReflexAgent
+
+
+# layout
+-l
+    testClassic
+    openClassic
+
+#Ghost 设置
+-g DirectionalGhost
+-f 随机数固定
+
+# 重要类
+GameState
+    getLegalActions() 获取当前状态合法的下一步
+    getPacmanNextState(action)
+    getPacmanPosition() 返回二元坐标
+    getGhostStates() 获取所有ghost state，返回list。每个元素的类型是AgentState
+
+
+-p ExpectimaxAgent -l smallClassic -a evalFn=betterEvaluationFunction

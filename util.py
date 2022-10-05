@@ -32,6 +32,8 @@ import heapq
 import random
 import io
 
+# import game
+
 
 class FixedRandom:
     def __init__(self):
@@ -549,7 +551,7 @@ def flipCoin(p):
     return r < p
 
 
-def chooseFromDistribution(distribution):
+def chooseFromDistribution(distribution:{str:float}):
     "Takes either a counter or a list of (prob, key) pairs and samples"
     if type(distribution) == dict or type(distribution) == Counter:
         return sample(distribution)
@@ -715,3 +717,4 @@ def unmutePrint():
 
     sys.stdout = _ORIGINAL_STDOUT
     #sys.stderr = _ORIGINAL_STDERR
+

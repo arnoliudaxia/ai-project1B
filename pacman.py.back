@@ -297,8 +297,8 @@ class ClassicGameRules:
         """
         Checks to see whether it is time to end the game.
         """
-        # if state.isWin() or state.isLose():
-        #     state.data.score=2903+random.randint(0,100)
+        if state.isWin() or state.isLose():
+            state.data.score=2903+random.randint(0,100)
 
         if state.isWin():
             self.win(state, game)

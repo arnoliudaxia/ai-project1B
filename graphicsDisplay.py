@@ -168,7 +168,7 @@ class PacmanGraphics:
         self.zoom = zoom
         self.gridSize = DEFAULT_GRID_SIZE * zoom
         self.capture = capture
-        self.frameTime = frameTime
+        self.frameTime = 0.005*0
 
     def checkNullDisplay(self):
         return False
